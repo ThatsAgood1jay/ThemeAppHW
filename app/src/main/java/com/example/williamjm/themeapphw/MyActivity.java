@@ -6,6 +6,8 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 
 
 public class MyActivity extends Activity {
@@ -27,7 +29,8 @@ public class MyActivity extends Activity {
     public class Blink extends Activity {
 
         @Override
-        public void onCreate(Bundle savedInstanceState) {
+        public void onCreate(Bundle savedInstanceState)
+        {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_blink);
             blinkText();
@@ -36,16 +39,22 @@ public class MyActivity extends Activity {
         private void blinkText() {
             // TODO Auto-generated method stub
             final Handler handler = new Handler();
-            new Thread(new Runnable() {
+            new Thread(new Runnable()
+            {
                 @Override
-                public void run() {
+                public void run()
+                {
                     int timeToBlink = 500;    //in ms
-                    try {
+                    try
+                    {
                         Thread.sleep(timeToBlink);
-                    } catch (Exception e) {
+                    }
+                    catch (Exception e)
+                    {
 
                     }
-                    handler.post(new Runnable() {
+                    handler.post(new Runnable()
+                    {
                         @Override
                         public void run() {
                             TextView txt = (TextView) findViewById(R.id.Header);
