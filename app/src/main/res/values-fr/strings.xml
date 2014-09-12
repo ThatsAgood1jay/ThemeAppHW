@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ThemeAppHW</string>
+    <string name="hello_world">Bonjour le monde!</string>
+    <string name="action_settings">paramètres</string>
+    <string name="Welcometotg">+@id\Bienvenue à Top Gear!</string>
+
+</resources>
