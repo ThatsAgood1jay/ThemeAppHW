@@ -2,8 +2,7 @@
 <resources>
 
     <string name="app_name">ThemeAppHW</string>
-    <string name="hello_world">Bonjour le monde!</string>
     <string name="action_settings">paramètres</string>
-    <string name="Welcometotg">+@id\Bienvenue à Top Gear!</string>
+    <string name="Welcometotg">Bienvenue à Top Gear!</string>
 
 </resources>
