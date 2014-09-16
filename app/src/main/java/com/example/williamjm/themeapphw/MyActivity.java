@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 public class MyActivity extends Activity {
 
+    MediaPlayer topTheme;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
-        MediaPlayer ourSong = MediaPlayer.create(MyActivity.this, R.raw.tgintro);
-        ourSong.start();
+        topTheme = MediaPlayer.create(MyActivity.this, R.raw.tgintro);
+        topTheme.start();
         blinkText();
     }
 
@@ -27,7 +28,6 @@ public class MyActivity extends Activity {
         getMenuInflater().inflate(R.menu.my, menu);
         return true;
     }
-
         private void blinkText() {
             // TODO Auto-generated method stub
             final Handler handler = new Handler();
@@ -55,7 +55,14 @@ public class MyActivity extends Activity {
                 }
             }).start();
         }
+
+    @Override
+    protected void onPause(){
+        super.onPause();
+        topTheme.release();
+        finish();
     }
+}
 
 
 
